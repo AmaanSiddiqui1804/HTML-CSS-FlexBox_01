@@ -12,6 +12,9 @@
         }
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header, footer {
             background: yellowgreen;
@@ -20,7 +23,7 @@
         }
         #main {
             display: flex;
-            min-height: calc(100vh - 40vh);
+            flex: 1;
         }
         #main > article {
             flex: 1;
@@ -48,27 +51,25 @@
             color: black;
             font-weight: bold;
         }
-
         /* Card Layout */
         .cards {
             display: flex;
             flex-wrap: wrap;
+            align-items: stretch;
             justify-content: center;
-            align-items: flex-start;
             gap: 10px;
-            margin-top: 20px;
         }
         .card {
             flex: 0 0 200px;
             margin: 10px;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-        }
+        } 
         .card img {
             max-width: 100%;
         }
         .card .text {
-            padding: 10px;
+            padding: 0 20px 20px;
         }
         .card .text > button {
             background: gray;
@@ -77,8 +78,7 @@
             padding: 10px;
             width: 100%;
         }
-
-        /* Image Gallery */
+        /* Image Gallery Styles */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -95,6 +95,31 @@
         }
         .gallery img:hover {
             transform: scale(1.05);
+        }
+        
+        /* Media Layout */
+        .media {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            background: #d0a83a;
+            padding: 1em;
+            border-radius: 5px;
+            width: 100%; 
+            position: bottom; 
+        }
+
+        .media-object {
+            width: 100px;
+            height: auto;
+        }
+        .media-body {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .media-heading {
+            margin: 0 0 .5em;
         }
     </style>
 </head>
@@ -115,10 +140,14 @@
         <article>
             <h2>Shaping Reality, Virtually</h2>
             <br>
-            <p>Step into the future with immersive experiences like never before! 
-                At AA Group, we redefine reality through cutting-edge VR/AR technology.</p>
-            
-            <!-- Card Section -->
+            <p>Step into the future with immersive experiences like never before! At AA Group, 
+                we redefine reality through cutting-edge VR/AR technology, blending the virtual 
+                with the real to create limitless possibilities. Whether it's revolutionizing 
+                how you work, play, or connect, our innovations are designed to transform 
+                everyday moments into extraordinary adventures.
+            <br>
+            </p>
+            <!-- Card Layout -->
             <section class="cards">
                 <article class="card">
                     <img src="images\Sample_Card_01.jpg" alt="Sample photo">
@@ -145,7 +174,7 @@
                     </div>
                 </article>
             </section>
-            
+
             <!-- Image Gallery -->
             <section class="gallery">
                 <img src="images/Sample_AR_01.jpeg" alt="Sample photo">
@@ -160,8 +189,19 @@
         </article>
         <aside>
             <h2>UPDATES!</h2>
-            <p>Stay updated with the latest breakthroughs and announcements in the world of VR/AR technology.</p>
+            <p>
+                Stay updated with the latest breakthroughs, exciting announcements, and upcoming 
+                events in the world of VR/AR technology. 
+                Explore more about how we're shaping industries and transforming experiences every day.
+            </p>
         </aside>
+    </div>
+    <div class="media">
+        <img class="media-object" src="images/creator.jpg" alt="Creator Photo">
+        <div class="media-body">
+            <h3 class="media-heading">Amaan Siddiqui - The Visionary Behind AA Group</h3>
+            <p>Amaan Siddiqui, an innovator in Virtual and Augmented Reality, is revolutionizing the way we interact with technology. His expertise in AI, automation, and cloud computing makes him a driving force in futuristic advancements.</p>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 AA Group. All rights reserved.</p>
