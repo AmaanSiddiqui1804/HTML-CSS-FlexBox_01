@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AA Industries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background: yellowgreen;
+            text-align: center;
+            padding: 20px;
+        }
+        #main {
+            display: flex;
+            min-height: calc(100vh - 40vh);
+        }
+        #main > article {
+            flex: 1;
+            padding: 20px;
+        }
+        #main > nav, 
+        #main > aside {
+            flex: 0 0 20vw;
+            background: beige;
+            padding: 20px;
+        }
+        #main > nav {
+            order: -1;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+            height: auto;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Image Gallery Styles */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .cards img {
+            border: 3px solid #000;
+            box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+            max-width: 23vw;
+            transition: transform 0.3s ease-in-out;
+        }
+        .cards img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/aa-logo2.png" alt="Company Logo" class="logo">
+        <h1>Welcome To The World of Possibilities</h1>
+    </header>
+    <div id="main">
+        <nav>
+            <h2>Navigation</h2>
+            <div class="links">
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <article>
+            <h2>Shaping Reality, Virtually</h2>
+            <br>
+            <p>Step into the future with immersive experiences like never before! At AA Group, 
+                we redefine reality through cutting-edge VR/AR technology, blending the virtual 
+                with the real to create limitless possibilities. Whether it’s revolutionizing 
+                how you work, play, or connect, our innovations are designed to transform 
+                everyday moments into extraordinary adventures.
+            </p>
+
+            <!-- Image Gallery -->
+            <section class="cards">
+                <img src="images/Sample_AR_01.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_02.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_03.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_04.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_01.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_02.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_03.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_05.jpeg" alt="Sample photo">
+            </section>
+
+        </article>
+        <aside>
+            <h2>UPDATES!</h2>
+            <p>
+                Stay updated with the latest breakthroughs, exciting announcements, and upcoming 
+                events in the world of VR/AR technology. 
+                Explore more about how we're shaping industries and transforming experiences every day.
+            </p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2025 AA Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
