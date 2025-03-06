@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AA Industries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background: yellowgreen;
+            text-align: center;
+            padding: 20px;
+        }
+        #main {
+            display: flex;
+            min-height: calc(100vh - 40vh);
+        }
+        #main > article {
+            flex: 1;
+            padding: 20px;
+        }
+        #main > nav, 
+        #main > aside {
+            flex: 0 0 20vw;
+            background: beige;
+            padding: 20px;
+        }
+        #main > nav {
+            order: -1;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+            height: auto;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Card Layout */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .card {
+            flex: 0 0 200px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+        }
+        .card img {
+            max-width: 100%;
+        }
+        .card .text {
+            padding: 10px;
+        }
+        .card .text > button {
+            background: gray;
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            border: 3px solid #000;
+            box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+            max-width: 23vw;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/aa-logo2.png" alt="Company Logo" class="logo">
+        <h1>Welcome To The World of Possibilities</h1>
+    </header>
+    <div id="main">
+        <nav>
+            <h2>Navigation</h2>
+            <div class="links">
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <article>
+            <h2>Shaping Reality, Virtually</h2>
+            <p>Step into the future with immersive experiences like never before! 
+                At AA Group, we redefine reality through cutting-edge VR/AR technology.</p>
+            
+            <!-- Card Section -->
+            <section class="cards">
+                <article class="card">
+                    <img src="images\Sample_Card_01.jpg" alt="Sample photo">
+                    <div class="text">
+                        <h3>Innovative Ideas</h3>
+                        <p>Bringing the best of VR/AR into real-world applications.</p>
+                        <button>Learn More</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images\Sample_Card_02.jpeg" alt="Sample photo">
+                    <div class="text">
+                        <h3>Revolutionary Tech</h3>
+                        <p>Leading the industry with next-gen immersive solutions.</p>
+                        <button>Discover</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images\Sample_Card_03.jpg" alt="Sample photo">
+                    <div class="text">
+                        <h3>Future Ready</h3>
+                        <p>Redefining the way we experience digital interactions.</p>
+                        <button>Explore</button>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- Image Gallery -->
+            <section class="gallery">
+                <img src="images/Sample_AR_01.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_02.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_03.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_04.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_01.jpeg" alt="Sample photo">
+                <img src="images/Sample_VR_02.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_03.jpeg" alt="Sample photo">
+                <img src="images/Sample_AR_05.jpeg" alt="Sample photo">
+            </section>
+        </article>
+        <aside>
+            <h2>UPDATES!</h2>
+            <p>Stay updated with the latest breakthroughs and announcements in the world of VR/AR technology.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2025 AA Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
